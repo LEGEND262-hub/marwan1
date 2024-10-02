@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="نووسینگەی شۆفێری مەڕوان">
+    <title>نووسینگەی شۆفێری مەڕوان</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centering text in sections */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .map-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .map-button:hover {
+            background-color: #0056b3;
+        }
+        
+
+    
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>نووسینگەی شۆفێری مەڕوان</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home" onclick="showSection('home')">ماڵەوە</a></li>
+        <li><a href="#about" onclick="showSection('about')">دەربارە</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">پەیوەندی کردن</a></li>
+    </ul>
+    <img src="nusi.jfif" width="100" alt="" style="position: relative; left: -300px; margin-right: 20px;">
+
+
+
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <h2>بەخێربێیت بۆ نووسینگەی شۆفێری مەڕوان</h2>
+    <p>لەم نووسینگەیەدا، ئێمە یارمەتی خوێندکارەکانمان دەدەین بۆ فێربوونی شۆفێری بە باشترین ڕێگا.</p>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>دەربارەی نووسینگەی شۆفێری مەڕوان</h2>
+    <p>ئەم نووسینگەیە یارمەتی داناوە بۆ خوێندکاران وە ڕاهێنانەکانتان پێ دەکات بە باشترین شێوە.</p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>پەیوەندی کردن</h2> <!-- Changed text here -->
+    <p>ناونیشانی نووسینگە: بەرامبەر نەخۆشخانەی شۆرش  .</p>
+    <a href="https://www.google.com/maps?q=35.525183,45.462053" class="map-button" target="_blank">نیشانی نووسینگە</a>
+    <a href="tel:07725052544" class="map-button"> 0772 505 2544</a> <!-- Contact Number 1 -->
+    <a href="tel:07508202346" class="map-button"> 0750 820 2346</a> <!-- Contact Number 2 -->
+</section>
+
+<footer>
+    <p>© 2024 نووسینگەی شۆفێری مەڕوان</p>
+</footer>
+
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none'; // Hide all sections
+        });
+        document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+    }
+
+    // Handle the search functionality
+    function handleSearch(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+        
+        if (searchTerm === 'marwan' || searchTerm === 'مەڕوان') {
+            // Redirect to a specific URL or display a message
+            alert("تکایە سەرچاوەی 'marwan' یا 'مەڕوان' پیدا کرا");
+            // Here you can add the URL you want to redirect to
+            // window.location.href = 'your-redirect-url.html';
+        } else {
+            alert("تکایە سەرچاوەی 'marwan' یا 'مەڕوان' پیدا ناکرێت");
+        }
+    }
+
+    // Show home section by default
+    document.addEventListener("DOMContentLoaded", function() {
+        showSection('home');
+    });
+</script>
+
+</body>
+</html>
